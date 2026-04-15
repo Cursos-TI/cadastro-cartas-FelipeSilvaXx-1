@@ -9,6 +9,8 @@ int main () {
    float area1, area2;
    float pib1, pib2;
    int numero_turismo1, numero_turismo2 ;
+   float mediadensidade1, mediadensidade2;
+   float mediapib1, mediapib2;
 
 printf("Carta 1: \n");
 
@@ -33,6 +35,12 @@ scanf(" %f", &pib1);
 printf("Digite o numero de pontos turisticos: \n");
 scanf("%d", &numero_turismo1);
 
+mediadensidade1 = populacao1 / area1;
+mediapib1 = pib1 / populacao1;
+
+
+
+//***************Carta 2********************** */
 
 printf("Carta 2: \n");
 
@@ -57,6 +65,10 @@ scanf("%f", &pib2);
 printf("Digite o numero de pontos turisticos: \n");
 scanf("%d", &numero_turismo2); // numero de pontos turisticos da cidade
 
+mediadensidade2 = populacao2 / area2;
+mediapib2 = pib2 / populacao2;
+
+
 printf("\n--- Carta 1 ---\n");
 
 printf("Estado: %c\n", estado1);
@@ -65,7 +77,8 @@ printf("Nome da Cidade: %s\n", nome_cidade1);
 printf("Numero da População: %d\n", populacao1);
 printf("Area da Cidade: %.2f km²\n", area1);
 printf("PIB da cidade: %2.f\n", pib1);
-
+printf("A densidade é: %.2f hab/km²\n", mediadensidade1);
+printf("O PIB per capita é: %.2f reais\n", mediapib1);
 
 printf("\n--- Carta 2 ---\n");
 
@@ -75,6 +88,8 @@ printf("Nome da Cidade: %s\n", nome_cidade2);
 printf("População: %d\n", populacao2);
 printf("Area da Cidade: %.2f km²\n", area2);
 printf("PIB: %2.f\n", pib2);
+printf("A densidade é: %.2f hab/km²\n", mediadensidade2);
+printf("O PIB per capita é: %.2f reais\n", mediapib2);
 
 
 
@@ -82,3 +97,16 @@ printf("PIB: %2.f\n", pib2);
 return 0;
 
 }
+
+
+/*Aprimorando o jogo
+Exibir na tela a densidade populacional eo pib per capita
+dividir a população pelo área para ter a densidade
+dividir o pib pela população para ter o pib per capita
+armazenar valores na variavel float
+exibir os resultados na tela com duas casas decimais 
+media1 = populacao1 / area1;
+media2 = populacao2 / area2;
+media1 = pib1 / populacao1;
+media2 = pib2 / populacao2;
+   Fim do Programa */
